@@ -3,9 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script defer src="script.js"></script>
     <title>Js Test 4</title>
   </head>
-  <body></body>
+  <body>
+    <div class="app-container">
+      <h1 class="app-title">Expense Tracker</h1>
+      <div class="form-container">
+        <input
+          type="text"
+          id="expense-name"
+          class="input-field"
+          placeholder="expense name"
+        />
+        <input
+          type="number"
+          id="expense-amount"
+          class="input-field"
+          placeholder="amount"
+        />
+        <input type="date" id="expense-date" class="input-field" />
+        <select id="expense-category" class="input-field">
+          <option value="">select category</option>
+          <option value="food">food</option>
+          <option value="transport">transport</option>
+          <option value="entertainment">entertainment</option>
+          <option value="bills">bills</option>
+        </select>
+        <button id="add-expense-btn" class="add-btn">add expense</button>
+      </div>
+      <table class="expense-table">
+        <tr>
+          <th>name</th>
+          <th>amount</th>
+          <th>date</th>
+          <th>category</th>
+          <th>action</th>
+        </tr>
+        <tbody id="expense-list"></tbody>
+      </table>
+      <div class="total-expense">
+        <p>Total Expense: ₹ <span id="total-amount">0</span></p>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
